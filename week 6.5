@@ -1,0 +1,9 @@
+n=int(input().strip())
+A=list(map(int, input().strip().split()))
+B=list(map(int, input().strip().split()))
+x={}
+for i,num in enumerate(B):
+    x[num] = i
+P = [x[num] for num in A]
+
+print(" ".join(map(str, P)))
