@@ -1,0 +1,10 @@
+def find_substring_index(String1, String2):
+    if String2 in String1:
+        return String1.index(String2)
+    else:
+        return -1
+
+sample_input1 = input()
+sample_input2 = input()
+result = find_substring_index(sample_input1, sample_input2)
+print(result)
