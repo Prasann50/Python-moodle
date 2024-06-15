@@ -1,0 +1,37 @@
+def eliminate_common_elements():
+    # Read input
+    sizes = input().split()
+    size1 = int(sizes[0])
+    size2 = int(sizes[1])
+
+    array1 = list(map(int, input().split()))
+    array2 = list(map(int, input().split()))
+
+    # Convert lists to sets to find common elements
+    set1 = set(array1)
+    set2 = set(array2)
+
+    # Find common elements
+    common_elements = set1.intersection(set2)
+
+    # Collect non-repeating elements
+    non_repeating = []
+
+    for num in array1:
+        if num not in common_elements:
+            non_repeating.append(num)
+
+    for num in array2:
+        if num not in common_elements:
+            non_repeating.append(num)
+
+    # Check if there are any non-repeating elements
+    if non_repeating:
+        print(" ".join(map(str, non_repeating)))
+        print(len(non_repeating))
+    else:
+        print("NO SUCH ELEMENTS")
+
+# Example usage
+eliminate_common_elements()
+eliminate_common_elements()
