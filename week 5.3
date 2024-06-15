@@ -1,0 +1,22 @@
+def reverse_special_chars(s):
+    temp = []
+    for char in s:
+        if char.isalpha():
+            temp.append(char)
+
+    temp.reverse()
+
+    result = ""
+    temp_index = 0
+    for char in s:
+        if char.isalpha():
+            result += temp[temp_index]
+            temp_index += 1
+        else:
+            result += char
+
+    return result
+
+sample_input = input()
+output = reverse_special_chars(sample_input)
+print(output)  
